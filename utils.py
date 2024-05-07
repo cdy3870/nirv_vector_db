@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 import torch
 
 # initialize connection to pinecone (get API key at app.pinecone.io)
-api_key = os.environ.get('PINECONE_API_KEY') or "2eb88fd4-ee3f-47ef-97b9-08a2cb42528e"
+api_key = st.secrets["api_key"]
 
 params = {"sim_mets": ["l2", "cosine", "dot_product"],
      "search_algo": ["exhaustive", "beam", "hierarchical"],
