@@ -3,6 +3,7 @@ import random
 import os
 from sentence_transformers import SentenceTransformer
 import torch
+import streamlit as st
 
 # initialize connection to pinecone (get API key at app.pinecone.io)
 api_key = st.secrets["api_key"]
